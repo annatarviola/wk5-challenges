@@ -1,17 +1,9 @@
-let vowelCount = 0
-
-function hasMoreVowels(word) { 
-    for (let i = 0; i < word.length; i++) {
-        if (word.charAt(i) === 'a' || word.charAt(i) === 'e' || word.charAt(i) === 'i' || word.charAt(i) === 'o' || word.charAt(i) === 'u') {
-            vowelCount++
-        }
-    }
-
-    if (vowelCount > (word.length / 2)) {
-        return true
-    } else {
-        return false
+function printDigits(num) {
+    while (num) {
+        let reverseDigitPrint = num % 10;
+        console.log(reverseDigitPrint)
+        num = (num - reverseDigitPrint) / 10
     }
 }
 
-console.log(hasMoreVowels(`graph`))
+printDigits(123456789)
